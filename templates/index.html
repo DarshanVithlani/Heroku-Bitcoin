@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcon Price Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/2d148866940517.5b286860df87a.gif);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .card-header{
+            text-align: center;
+        }
+
+        button{
+            padding: 15px;
+            margin: 40px 0;
+        }
+
+        h1{
+            font: bold sans-serif ;
+        }
+
+        label{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .result{
+            font-size: 40px;
+            text-align: center;
+        }
+.card { background-color: rgba(245, 245, 245, 0.4); }
+.card-header, .card-footer { opacity: 1}
+
+    </style>
+</head>
+<body>
+    
+    <div class="offset-sm-3 col-sm-6">
+        <div class="card border-info mb-3" >
+            
+            <div class="card-header">
+                <h1>Bitcoin Price Predictor</h1>
+                <small style="white-space: pre-line"> 
+                   <b>Made by Darshan-Jaimin-Kashika</b>
+                    The model has been trained till 18th Oct,2020. 
+                Please select a date after 18-10-2020.</small>
+            </div>
+    
+            <div class="card-body">
+                <form method="post" action="/api">
+
+                    <div class="form-group">
+                        <label>Enter Date</label>
+                        <input id="first" class="form-control" name="Year" placeholder="Enter Date" type="Date">
+                    </div> 
+                    
+                 
+                   <button id="sub" type="submit" class="btn btn-block btn-warning" >Check Price</button> 
+                </form>
+            </div>
+
+            <h3 class="result">{{ data }}<h3>
+
+        </div>
+    </div> 
+
+
+</body>
+</html>
